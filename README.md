@@ -1,2 +1,2 @@
 # SilasAutomates.github.io
-My Portfoli
+My Portfolio
