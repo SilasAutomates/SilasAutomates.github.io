@@ -46,6 +46,11 @@
       padding: 50px 30px 70px;
     }
 
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* ----- header / profile ----- */
     .profile-header {
       display: flex;
@@ -76,12 +81,24 @@
       flex-shrink: 0;
     }
 
-    .header-text h1 {
-      font-size: 2.9rem;
-      font-weight: 700;
+    /* Name styling - big and prominent */
+    .header-text .name-title {
+      font-size: 3.5rem;
+      font-weight: 800;
       letter-spacing: -0.02em;
-      margin: 0 0 6px 0;
+      margin: 0 0 4px 0;
       color: var(--text-primary);
+      line-height: 1.1;
+    }
+
+    /* Role styling - bolder and more prominent */
+    .header-text .role-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0 0 12px 0;
+      opacity: 0.9;
+      letter-spacing: -0.01em;
     }
 
     .header-text .badge-row {
@@ -408,7 +425,8 @@
       .project-content { padding: 24px 20px; }
       .contact-section { padding: 36px 20px; }
       .contact-item { padding: 10px 20px; }
-      .header-text h1 { font-size: 2.2rem; }
+      .header-text .name-title { font-size: 2.5rem; }
+      .header-text .role-title { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -420,7 +438,10 @@
   <header class="profile-header">
     <img src="Profile.jpg" alt="Profile" class="profile-img" onerror="this.style.display='none'" />
     <div class="header-text">
-      <h1>AI Apps &amp; Agent Developer</h1>
+      <!-- YOUR NAME - Primary heading -->
+      <h1 class="name-title">Edward Yakno</h1>
+      <!-- Role - Now BOLDER and more prominent -->
+      <h2 class="role-title">AI Apps &amp; Agent Developer</h2>
       <div class="badge-row">
         <span class="badge"><i class="fas fa-robot" style="margin-right:6px;"></i> Copilot Studio</span>
         <span class="badge"><i class="fas fa-bolt"></i> Power Platform</span>
@@ -428,9 +449,11 @@
       </div>
       <h2>Agentic Automation · LLM Orchestration · M365</h2>
       <div class="cta-buttons">
+        <!-- Get in Touch - smooth scrolls to contact section -->
         <a href="#contact-section" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
         <a href="resume.pdf" download class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Download CV</a>
-        <a href="https://github.com/SilasAutomates" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+        <!-- GitHub - links to your actual GitHub profile -->
+        <a href="https://github.com/SilasAutomates" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
   </header>
@@ -467,8 +490,9 @@
         </div>
       </article>
 
-      <!-- project 2 (new, amplifying) -->
-     <!--  <article class="project-card">
+      <!-- project 2 - COMMENTED OUT for now, uncomment when ready -->
+      <!-- 
+      <article class="project-card">
         <div class="video-wrapper">
           <video controls>
             <source src="demo-video.mp4" type="video/mp4" />
@@ -490,7 +514,8 @@
             <span class="skill-tag">NLP</span>
           </div>
         </div>
-      </article> -->
+      </article>
+      -->
 
     </div>
   </section>
@@ -513,12 +538,19 @@
           </div>
         </div>
         <div class="tag-group">
-          <span class="tag-label">LLM &amp; NLP</span>
+          <span class="tag-label">LLM &amp; NLP Models</span>
           <div class="tags-wrapper">
             <span class="skill-tag">Azure OpenAI</span>
-            <span class="skill-tag">GPT-4 / 3.5</span>
+            <span class="skill-tag">GPT-4 / GPT-4 Turbo</span>
+            <span class="skill-tag">GPT-3.5 Turbo</span>
+            <span class="skill-tag">Claude 3.5 Sonnet</span>
+            <span class="skill-tag">Claude 3 Opus</span>
+            <span class="skill-tag">Gemini Pro</span>
+            <span class="skill-tag">LLaMA 3</span>
+            <span class="skill-tag">Mistral Large</span>
             <span class="skill-tag">Embeddings</span>
             <span class="skill-tag">RAG</span>
+            <span class="skill-tag">Fine-tuning</span>
           </div>
         </div>
       </div>
@@ -534,6 +566,7 @@
             <span class="skill-tag">REST / Graph</span>
             <span class="skill-tag">Custom Connectors</span>
             <span class="skill-tag">JSON / XML</span>
+            <span class="skill-tag">Vector Databases</span>
           </div>
         </div>
       </div>
@@ -572,6 +605,8 @@
             <span class="skill-tag">YAML</span>
             <span class="skill-tag">Git</span>
             <span class="skill-tag">Postman</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">Semantic Kernel</span>
           </div>
         </div>
       </div>
@@ -582,23 +617,23 @@
   <!-- ========== CONTACT SECTION (anchor) ========== -->
   <section id="contact-section" class="portfolio-section">
     <div class="contact-section">
-      <h2><i class="fas fa-envelope" style="color:var(--accent); margin-right:14px;"></i>Let’s connect</h2>
+      <h2><i class="fas fa-envelope" style="color:var(--accent); margin-right:14px;"></i>Let's connect</h2>
       <p class="sub">
-        I’m open to remote AI/automation roles, consulting, and innovative agentic projects.
-        Reach out — I’ll respond within 24h.
+        I'm open to remote AI/automation roles, consulting, and innovative agentic projects.
+        Reach out — I'll respond within 24h.
       </p>
 
       <div class="contact-grid">
-        <a href="mailto:your.email@example.com" class="contact-item">
+        <a href="mailto:edwardyakno@yahoo.com" class="contact-item">
           <i class="fas fa-envelope"></i> edwardyakno@yahoo.com
         </a>
         <a href="#" class="contact-item">
           <i class="fab fa-linkedin-in"></i> linkedin.com/in/yakno-edward/
         </a>
-        <a href="#" class="contact-item">
+        <a href="https://github.com/SilasAutomates" target="_blank" class="contact-item">
           <i class="fab fa-github"></i> github.com/SilasAutomates
         </a>
-        </div>
+      </div>
 
       <div class="contact-extra">
         <span><i class="fas fa-calendar-check"></i> Available for freelance / full-time</span>
@@ -611,7 +646,7 @@
   <footer>
     <p style="margin-bottom: 8px;">
       <i class="fas fa-crown" style="color:var(--accent);"></i> AI Apps &amp; Agent Developer · 
-      <a href="mailto:your.email@example.com">edwardyakno@yahoo.com</a>
+      <a href="mailto:edwardyakno@yahoo.com">edwardyakno@yahoo.com</a>
     </p>
     <p style="font-size:0.85rem; opacity:0.7;">
       &copy; 2026 · Built with <i class="fas fa-heart" style="color:#d14c4c;"></i> for global impact
